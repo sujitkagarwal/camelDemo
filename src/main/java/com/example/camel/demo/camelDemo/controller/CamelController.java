@@ -16,6 +16,6 @@ public class CamelController {
     @RequestMapping(value = "/HelloCamel")
     public String startCamel() {
         producerTemplate.sendBody("direct:firstRoute", "Calling via Spring Boot Rest Controller");
-        return "Calling via Spring Boot Rest Controller";
+        return "Calling via Apache Camel Rest Controller using Spring Boot";
     }
 }
