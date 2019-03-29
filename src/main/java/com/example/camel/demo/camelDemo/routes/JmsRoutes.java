@@ -12,10 +12,10 @@ public class JmsRoutes extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {
-        from("timer:foo?period=1s").
+      /*  from("timer:foo?period=1s").
                 setBody(simple("Simple message to queue")).
                 log("log the line:: ${body}  ").
-                to("activemq:queue:order");
+                to("activemq:queue:order");*/
 
         from("activemq:queue:order").
                 log("New Message Received::: ${body}").end();
